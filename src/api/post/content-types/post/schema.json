@@ -32,14 +32,11 @@
     "description": {
       "type": "text"
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "random",
-        "tech",
-        "javascript",
-        "self-development"
-      ]
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "posts"
     }
   }
 }
